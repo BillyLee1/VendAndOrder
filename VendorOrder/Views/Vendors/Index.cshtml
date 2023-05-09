@@ -14,12 +14,12 @@
 
     <h1 id='title'>Pierre's Vendor and Order Tracker</h1>
 
-    <a href="/vendors">Click here to create a vendor</a>
+    <a href="/vendors/new">Click here to create a vendor</a>
 
     <ul>
       @foreach (Vendor vendor in Model)
       {
-        <li>@vendor.VendorName - @vendor.VendorDesc</li>
+        <li>@vendor.VendorName - @vendor.VendorDesc <button type="submit">Create a new order</button></li>
       }
     </ul>
   </body>

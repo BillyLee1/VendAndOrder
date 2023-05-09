@@ -14,5 +14,11 @@ namespace VendorOrder.Models
       VendorDesc = vendorDesc;
       _instances.Add(this);
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
+
   }
 }

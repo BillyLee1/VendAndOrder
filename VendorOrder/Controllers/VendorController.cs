@@ -6,13 +6,20 @@ namespace VendorOrder.Controllers
 {
   public class VendorsController : Controller
   {
-    [HttpGet("/vendors")]
+    [HttpGet("/vendors/new")]
     public ActionResult Vendors()
     {
       return View();
     }
 
-    [HttpPost("/")]
+    [HttpGet("/vendors")]
+    public ActionResult Index()
+    {
+      List<Vendor> allVendors = Vendor.GetAll();
+      return View(allVendors);
+    }
+
+    [HttpPost("/vendors")]
     public ActionResult Create(string vendorName, string vendorDesc)
     {
       Vendor vendor = new Vendor(vendorName, vendorDesc);
