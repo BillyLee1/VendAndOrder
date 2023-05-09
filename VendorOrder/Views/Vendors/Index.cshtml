@@ -10,9 +10,17 @@
       crossorigin="anonymous">
   </head>
   <body>
+    @using VendorOrder.Models;
+
     <h1 id='title'>Pierre's Vendor and Order Tracker</h1>
 
     <a href="/vendors">Click here to create a vendor</a>
 
+    <ul>
+      @foreach (Vendor vendor in Model)
+      {
+        <li>@vendor.VendorName - @vendor.VendorDesc</li>
+      }
+    </ul>
   </body>
 </html>
