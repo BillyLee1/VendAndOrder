@@ -27,10 +27,10 @@ namespace VendorOrder.Controllers
     }
 
     [HttpGet("/vendors/{id}")]
-    public ActionResult Show(int id)
+    public ActionResult VendorPage(int id)
     {
       Vendor findVendor = Vendor.Find(id);
-      return View();
+      return View(findVendor);
     }
   }
 }
