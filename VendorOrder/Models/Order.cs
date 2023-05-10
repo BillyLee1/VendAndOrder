@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace VendorOrder.Models
 {
@@ -11,7 +12,7 @@ namespace VendorOrder.Models
     public int Id {get; }
     private static List<Order> _orderInstances = new List<Order> { };
 
-    public Order(string orderTitle, string orderDesc, string orderDate, int orderPrice, int orderId )
+    public Order(string orderTitle, string orderDesc, string orderDate, int orderPrice)
     {
       Title = orderTitle;
       Desc = orderDesc;

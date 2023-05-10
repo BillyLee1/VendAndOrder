@@ -14,10 +14,17 @@
 
     <h1 id='title'>Pierre's Vendor and Order Tracker</h1>
 
-    <h2>Here are the orders for @Model.VendorName</h2>
-    <h2> Description : @Model.VendorDesc</h2>
+    <h2>Here are the orders for @Model["vendor"].VendorName</h2>
+    <h2> Description : @Model["vendor"].VendorDesc</h2>
 
-    <h2><a href="/vendors/@Model.Id/orders/new">Click here to make a new order </a> </h2>
+    <h2><a href='/vendors/@Model["vendor"].Id/orders/new'>Click here to make a new order </a> </h2>
+
+    <ol>
+    @foreach (Order order in @Model["order"])
+    {
+      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+    }
+    </ol>
 
   </body>
 </html>
