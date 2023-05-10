@@ -19,7 +19,7 @@
     <ul>
       @foreach (Vendor vendor in Model)
       {
-        <li>@vendor.VendorName - @vendor.VendorDesc <button type="submit">Create a new order</button></li>
+        <li><a href="/vendors/@vendor.Id">@vendor.VendorName - @vendor.VendorDesc</a></li>
       }
     </ul>
   </body>
