@@ -31,12 +31,12 @@ namespace VendorOrder.Controllers
     [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
-    Dictionary<string, object> model = new Dictionary<string, object>();
-    Vendor selectedVendor = Vendor.Find(id);
-    List<Order> foundOrders = selectedVendor.VendorsOrders;
-    model.Add("vendor", selectedVendor);
-    model.Add("order", foundOrders);
-    return View(model);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor selectedVendor = Vendor.Find(id);
+      List<Order> foundOrders = selectedVendor.VendorsOrders;
+      model.Add("vendor", selectedVendor);
+      model.Add("order", foundOrders);
+      return View(model);
     }
 
     [HttpPost("/vendors/{id}/orders")]

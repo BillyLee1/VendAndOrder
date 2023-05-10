@@ -12,13 +12,14 @@
   <body>
     @using VendorOrder.Models;
 
-    <h1 >@Model["vendor"].VendorName</h1>
-    <h1> @Model["order"].Title </h1>
-    <h2> Date : @Model["order"].Date</h2>
+    <h1>Vendor: @Model["vendor"].VendorName</h1>
+    <h1>@Model["order"].Title </h1>
+    <h2>Date : @Model["order"].Date</h2>
     <h2>Price :  @Model["order"].Price</h2>
-    <h2> Description : @Model["order"].Desc</h2>
+    <h2>Description : @Model["order"].Desc</h2>
 
-  <h2><a href='/vendors/@Model["vendor"].Id/'>Click here to go back to orders </a></h2>
+    <h2><a href='/vendors/@Model["vendor"].Id/'>Click here to go back to orders </a></h2>
+    <br>
     <h2><a href='/vendors'>Click here to go back to vendors </a></h2>
   </body>
 </html>

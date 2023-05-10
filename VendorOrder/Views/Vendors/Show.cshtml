@@ -16,6 +16,7 @@
 
     <h2>Here are the orders for @Model["vendor"].VendorName</h2>
     <h2> Description : @Model["vendor"].VendorDesc</h2>
+    <br>
 
     <h2><a href='/vendors/@Model["vendor"].Id/orders/new'>Click here to make a new order </a> </h2>
 
@@ -25,6 +26,6 @@
       <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
     }
     </ol>
-
+    <h2><a href='/vendors'>Click here to go back to vendors </a></h2>
   </body>
 </html>
