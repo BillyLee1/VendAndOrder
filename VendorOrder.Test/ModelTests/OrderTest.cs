@@ -46,7 +46,7 @@ namespace VendorOrder.Test
     {
       Order order1 = new Order("x", "x", "x", 1);
       Order order2 = new Order("x", "x", "x", 2);
-      Order find = Order.FindId(1);
+      Order find = Order.Find(1);
       Assert.AreEqual(order1, find);
     }
   }
